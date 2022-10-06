@@ -20,6 +20,9 @@ body {
   background-color: var(--dim-white);
   font-family: "EB Garamond", serif;
   line-height: 1.5;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 110px 80px auto 200px;
 }
 
 a {
@@ -48,5 +51,71 @@ h6 {
 
 /* Utilities */
 
-
 /* Header */
+header {
+  grid-column: 1 / span 12;
+  grid-row: 1 / span 1;
+  text-align: center;
+}
+
+.main-logo {
+  margin-top: 2rem;
+}
+
+.main-logo img {
+  width: 400px;
+  height: 50px;
+}
+
+/* Navigation */
+.main-nav {
+  grid-column: 1 / span 12;
+  background-color: var(--primary-black);
+}
+
+.main-nav ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  align-content: center;
+  padding: 6px 30px;
+  height: 75px;
+}
+
+#navbar > ul li {
+  font-size: 1.2rem;
+}
+
+#navbar > ul li a:hover {
+  border-bottom: solid 2px var(--dim-white);
+}
+
+/* Main */
+.main-section {
+  grid-column: 2 / span 10;
+  background-color: var(--primary-white);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 250px auto;
+  grid-gap: 20px;
+}
+
+
+
+
+
+/* Footer */
+#main-footer {
+  background-color: var(--primary-black);
+  grid-column: 1 / span 12;
+}
+
+#main-footer .footer-logo {
+    margin-top: 1.2rem;
+    margin-left: 9rem;
+}
+
+.footer-logo img {
+    width: 200px;
+    height: 100px;
+}
